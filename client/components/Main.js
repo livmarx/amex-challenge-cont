@@ -33,7 +33,7 @@ export default class App extends React.Component {
     return (
       <div className="main">
         <div className="header">
-          <h4>More content you might be interested in:</h4>
+          <h4>Books!</h4>
           <h6>Sponsored Links by Taboola</h6>
         </div>
         <div className="events">

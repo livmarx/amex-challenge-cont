@@ -16,7 +16,7 @@ app.use(express.json());
 console.log('dirname', __dirname);
 app.use(express.static(__dirname + '/public'));
 
-const PORT = process.env.PORT || 8888;
+const PORT = process.env.PORT || 8000;
 
 const init = async function() {
   // await db.sync();
