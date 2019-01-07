@@ -1,6 +1,7 @@
-import { getBooks, getBooksByAuthor } from '../reducers/books';
+import { getBooks, getBooksByAuthor, getBooksByISBN } from '../reducers/books';
 import { connect } from 'react-redux';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Main extends React.Component {
   constructor() {
@@ -8,10 +9,12 @@ class Main extends React.Component {
     this.state = {
       searchInputTitle: '',
       searchInputAuthor: '',
+      searchInputISBN: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.onSubmitTitle = this.onSubmitTitle.bind(this);
     this.onSubmitAuthor = this.onSubmitAuthor.bind(this);
+    this.onSubmitISBN = this.onSubmitISBN.bind(this);
   }
 
   handleChange(event) {
@@ -27,6 +30,9 @@ class Main extends React.Component {
         'this.state.searchInputAuthor:',
         this.state.searchInputAuthor
       );
+    } else if (eventTarget === 'isbn') {
+      this.setState({ searchInputISBN: event.target.value });
+      console.log('this.state.searchInputISBN:', this.state.searchInputISBN);
     }
   }
 
@@ -38,6 +44,10 @@ class Main extends React.Component {
   onSubmitAuthor() {
     console.log('on submit:', this.state.searchInputAuthor);
     this.props.fetchBooksByAuthor(this.state.searchInputAuthor);
+  }
+  onSubmitISBN() {
+    console.log('on submit:', this.state.searchInputISBN);
+    this.props.fetchBooksByISBN(this.state.searchInputISBN);
   }
 
   render() {
@@ -57,17 +67,23 @@ class Main extends React.Component {
             <input type="text" name="author" onChange={this.handleChange} />
             <input type="submit" value="Search" onClick={this.onSubmitAuthor} />
           </div>
+          <h3> or </h3>
+          <div>
+            Search by ISBN:{'  '}
+            <input type="text" name="isbn" onChange={this.handleChange} />
+            <input type="submit" value="Search" onClick={this.onSubmitISBN} />
+          </div>
         </div>
         <ul id="book-list">
           {this.props.books ? (
             this.props.books.map((book, i) => (
               <div key={i}>
                 <li>
-                  <h3>
-                    Title: {book.title}
-                    <br />
-                    Author: {book.author_name}
-                  </h3>
+                  <Link to={`/${book.isbn}`}>
+                    <h3>Title: {book.title}</h3>
+                  </Link>
+                  <br />
+                  <h3>Author: {book.author_name}</h3>
                   <button
                     type="button"
                     id={`${book.isbn}`}
@@ -100,6 +116,8 @@ const mapDispatchToProps = dispatch => {
     fetchBooks: searchInputTitle => dispatch(getBooks(searchInputTitle)),
     fetchBooksByAuthor: searchInputAuthor =>
       dispatch(getBooksByAuthor(searchInputAuthor)),
+    fetchBooksByISBN: searchInputISBN =>
+      dispatch(getBooksByISBN(searchInputISBN)),
   };
 };
 
