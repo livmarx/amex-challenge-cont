@@ -38,38 +38,31 @@ class Main extends React.Component {
           <h1>Search for a book here:</h1>
           <br />
           <div>
-            Title:{'  '}
+            Book Title:{'  '}
             <input type="text" name="title" onChange={this.handleChange} />
             <input type="submit" value="Search" onClick={this.onSubmit} />
           </div>
         </div>
         <ul id="book-list">
-          {books ? (
-            books.map(
-              book => (
-                console.log('this.props.books:', this.props.books),
-                (
-                  <div key={book.isbn}>
-                    <li>
-                      {/* <Link to={`/campuses/${book.isbn}`}> */}
-                      <h3>
-                        Book: {book.title}
-                        <br />
-                        Author: {book.author_name}
-                      </h3>
-                      {/* </Link> */}
-                      <button
-                        type="button"
-                        id={`${book.isbn}`}
-                        onClick={this.handleClick}
-                      >
-                        X
-                      </button>
-                    </li>
-                  </div>
-                )
-              )
-            )
+          {this.props.books ? (
+            this.props.books.map(book => (
+              <div key={book.isbn}>
+                <li>
+                  <h3>
+                    Book: {book.title}
+                    <br />
+                    Author: {book.author_name}
+                  </h3>
+                  <button
+                    type="button"
+                    id={`${book.isbn}`}
+                    onClick={this.handleClick}
+                  >
+                    X
+                  </button>
+                </li>
+              </div>
+            ))
           ) : (
             <div>
               <h1>NOPE!</h1>
@@ -82,6 +75,11 @@ class Main extends React.Component {
 }
 
 // connect component to redux store:
+
+const mapStateToProps = state => {
+  return { books: state.books };
+};
+
 const mapDispatchToProps = dispatch => {
   return {
     actions: {
@@ -91,6 +89,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Main);
