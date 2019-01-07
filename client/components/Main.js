@@ -79,7 +79,7 @@ class Main extends React.Component {
             this.props.books.map((book, i) => (
               <div key={i}>
                 <li>
-                  <Link to={`/${book.isbn}`}>
+                  <Link to={`/${book.id_depósito_legal}`}>
                     <h3>Title: {book.title}</h3>
                   </Link>
                   <br />
