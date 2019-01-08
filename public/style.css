@@ -1,9 +1,63 @@
-.main {
+body,
+html {
+  background-color: #78a0e2;
+  height: 100%;
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#search-bars {
+  display: flex;
+  justify-content: space-around;
+}
+
+#id-search {
+  align-items: space-around;
+  border: solid 5px #373289;
+  padding: 20px;
+  text-align: left;
+  background-color: #9ab5e2;
+}
+
+#general-search {
+  align-items: space-around;
+  border: solid 5px #373289;
+  padding: 20px;
+  text-align: left;
+  background-color: #9ab5e2;
+}
+#general-search .input-feild {
+  padding: 12px;
+}
+
+#book-by-title-author {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  padding: 20px;
+  margin: 10px;
+}
+
+.book-card a h3 {
+  margin: 0;
+}
+.book-card h4 {
+  margin: 0;
+}
+
+/* ------------Taboola code below: ------------------- */
+
+/* .main {
   background-color: #80ced6;
   padding: 1em;
-  /* width: 800px; */
+  width: 800px;
   border: solid 5px darkslategrey;
 }
+
 h4 {
   margin: 0%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,6 +65,7 @@ h4 {
   color: darkslategrey;
   overflow: hidden;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -21,7 +76,7 @@ h6 {
   color: #618685;
   margin-right: 30px;
   padding-top: 10px;
-}
+ }
 
 .header h4 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,8 +97,8 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 0.5em;
-}
-.event {
+}  */
+/* .event {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -77,8 +132,8 @@ img {
   .main {
     width: 800px;
   }
-}
-
+} */
+/*
 @media only screen and (max-width: 690px) {
   .header {
     flex-direction: column;
@@ -90,27 +145,31 @@ img {
 
 h4:hover {
   opacity: 0.5;
-}
+} */
+/*
 img:hover {
   opacity: 0.5;
 }
+
 .branding:hover {
   opacity: 0.5;
 }
+
 .main {
   background-color: #80ced6;
   padding: 1em;
   /* width: 800px; */
-  border: solid 5px darkslategrey;
-}
+/* border: solid 5px darkslategrey;
+} */
+/*
 h4 {
   margin: 0%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
   color: darkslategrey;
   overflow: hidden;
-}
-.header {
+} */
+/* .header {
   display: flex;
   justify-content: space-between;
 }
@@ -134,9 +193,9 @@ p {
   font-size: 12px;
   margin-top: 0px;
   margin-bottom: 0px;
-}
+} */
 
-.events {
+/* .events {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -163,8 +222,8 @@ img {
   padding: 0px;
   margin: 0px;
   justify-content: center;
-}
-
+} */
+/*
 .last-line {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -185,8 +244,8 @@ img {
   .header h6 {
     margin-left: 30px;
   }
-}
-
+} */
+/*
 h4:hover {
   opacity: 0.5;
 }
@@ -195,4 +254,4 @@ img:hover {
 }
 .branding:hover {
   opacity: 0.5;
-}
+} */

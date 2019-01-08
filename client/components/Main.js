@@ -8,8 +8,8 @@ class Main extends React.Component {
 
   render() {
     return (
-      <div id="welcome">
-        <h1>Book Search:</h1>
+      <div id="main">
+        <h1>Bookshelf</h1>
         <SearchBars />
         <br />
       </div>
