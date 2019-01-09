@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBars from './SeachBars';
 import NavBar from './NavBar';
 import Articles from './Articles';
+import Footer from './Footer';
 
 class Main extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class Main extends React.Component {
             Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
           </p>
           <Articles />
+          <Footer />
         </div>
       </div>
     );
