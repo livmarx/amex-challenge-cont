@@ -5,6 +5,8 @@ html {
   text-align: center;
   color: whitesmoke;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://www.freepik.com/free-vector/transparent-background-curve_1306397.htm');
+  background-repeat: no-repeat;
 }
 
 #search-bars {
@@ -47,6 +49,33 @@ html {
 }
 .book-card h4 {
   margin: 0;
+}
+
+#nav {
+  display: flex;
+  background-color: white;
+  opacity: 0.5;
+  text-align: left;
+}
+#nav img {
+  margin: 0;
+  padding: 0;
+}
+
+#nav #nav-links {
+  display: flex;
+  text-align: center;
+}
+
+.single-link {
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 60px;
 }
 
 /* ------------Taboola code below: ------------------- */

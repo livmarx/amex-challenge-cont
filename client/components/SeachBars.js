@@ -1,7 +1,7 @@
 import { getBooks, getBooksByAuthor, getBooksByISBN } from '../reducers/books';
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 
 const sortByTitle = function(a, b) {
   const titleA = a.title.toLowerCase(),
@@ -27,14 +27,12 @@ class SearchBars extends React.Component {
     this.state = {
       searchInputTitle: '',
       searchInputAuthor: '',
-      searchInputIdNumber: '',
       sortSelection: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.onSubmitTitle = this.onSubmitTitle.bind(this);
     this.onSubmitAuthor = this.onSubmitAuthor.bind(this);
-    this.onSubmitIdNumber = this.onSubmitIdNumber.bind(this);
   }
 
   handleChange(event) {
@@ -50,12 +48,6 @@ class SearchBars extends React.Component {
         'this.state.searchInputAuthor:',
         this.state.searchInputAuthor
       );
-    } else {
-      this.setState({ searchInputIdNumber: event.target.value });
-      console.log(
-        'this.state.searchInputIdNumber:',
-        this.state.searchInputIdNumber
-      );
     }
   }
 
@@ -68,14 +60,6 @@ class SearchBars extends React.Component {
     console.log('on submit:', this.state.searchInputAuthor);
     this.props.fetchBooksByAuthor(this.state.searchInputAuthor);
   }
-  onSubmitIdNumber(event) {
-    console.log('on submit:', this.state.searchInputIdNumber);
-    console.log('event.target.name:', event.target.name);
-    this.props.fetchBooksByISBN(
-      event.target.name,
-      this.state.searchInputIdNumber
-    );
-  }
 
   handleSelect(event) {
     this.setState({ sortSelection: event.target.value });
@@ -87,9 +71,10 @@ class SearchBars extends React.Component {
       this.props.books.sort(
         this.state.sortSelection === 'Title: a-z' ? sortByTitle : sortByAuthor
       );
-    const book = this.props.book;
+
     return (
       <div>
+        <NavBar />
         <div id="search-bars">
           <div id="general-search">
             <div className="input-feild">
@@ -101,6 +86,8 @@ class SearchBars extends React.Component {
                 onClick={this.onSubmitTitle}
               />
             </div>
+          </div>
+          <div id="general-search">
             <div className="input-feild">
               Search by author:{'  '}
               <input type="text" name="author" onChange={this.handleChange} />
@@ -108,41 +95,6 @@ class SearchBars extends React.Component {
                 type="submit"
                 value="Search"
                 onClick={this.onSubmitAuthor}
-              />
-            </div>
-          </div>
-          <div id="id-search">
-            <div className="input-feild">
-              Search by ISBN:{'  '}
-              <input type="text" name="ISBN" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                name="ISBN"
-                onClick={this.onSubmitIdNumber}
-              />
-            </div>
-            <div className="input-feild">
-              Search by OCLC:{'  '}
-              <input type="text" name="OCLC" onChange={this.handleChange} />
-              <input type="submit" value="Search" onClick={this.onSubmitISBN} />
-            </div>
-            <div className="input-feild">
-              Search by LCCN:{'  '}
-              <input type="text" name="LCCN" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                onClick={this.onSubmitIdNumber}
-              />
-            </div>
-            <div className="input-feild">
-              Search by OLID:{'  '}
-              <input type="text" name="OLID" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                onClick={this.onSubmitIdNumber}
               />
             </div>
           </div>
@@ -174,25 +126,6 @@ class SearchBars extends React.Component {
                   <h4>Written by {book.author_name}</h4>
                 </div>
               ))
-          ) : (
-            <div />
-          )}
-        </div>
-        <div id="book-by-id">
-          {book ? (
-            <div className="book-card">
-              <a href={book.url}>
-                <h3> {book.title}</h3>
-                <h4>{book.subtitle}</h4>
-                <h5>Written by {book.authors[0].name}</h5>
-
-                {book.cover ? (
-                  <img src={book.cover.large} />
-                ) : (
-                  <img src="https://www.globalenergy.com.sa/wp-content/uploads/2015/11/sempreview.jpg" />
-                )}
-              </a>
-            </div>
           ) : (
             <div />
           )}

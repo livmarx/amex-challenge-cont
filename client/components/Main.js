@@ -1,17 +1,26 @@
 import React from 'react';
 import SearchBars from './SeachBars';
+import NavBar from './NavBar';
+import Articles from './Articles';
 
 class Main extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <div id="main">
-        <h1>Bookshelf</h1>
-        <SearchBars />
+        <NavBar />
+        <h1>bÜkshelph</h1>
         <br />
+        <div id="about">
+          <p>
+            Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+            Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+            Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+            Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+            Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+            Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+          </p>
+          <Articles />
+        </div>
       </div>
     );
   }
