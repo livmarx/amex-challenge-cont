@@ -79,24 +79,32 @@ class SearchBars extends React.Component {
         <div id="search-bars">
           <div id="general-search">
             <div className="input-feild">
-              Search by title:{'  '}
-              <input type="text" name="title" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                onClick={this.onSubmitTitle}
-              />
+              <form>
+                Search by title:{'  '}
+                <input type="text" name="title" onChange={this.handleChange} />
+                <button
+                  type="submit"
+                  value="Search"
+                  onClick={this.onSubmitTitle}
+                >
+                  Search
+                </button>
+              </form>
             </div>
           </div>
           <div id="general-search">
             <div className="input-feild">
-              Search by author:{'  '}
-              <input type="text" name="author" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                onClick={this.onSubmitAuthor}
-              />
+              <form>
+                Search by author:{'  '}
+                <input type="text" name="author" onChange={this.handleChange} />
+                <button
+                  type="submit"
+                  value="Search"
+                  onClick={this.onSubmitAuthor}
+                >
+                  Search
+                </button>
+              </form>
             </div>
           </div>
         </div>

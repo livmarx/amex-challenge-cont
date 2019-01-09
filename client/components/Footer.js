@@ -7,7 +7,7 @@ class Footer extends React.Component {
       <div id="footer">
         <div id="na-logo">
           <Link to="/" className="single-link">
-            <img src="bookshelf.png" height="100" />
+            <img src="bookshelf.png" height="100" className="bookself-img" />
           </Link>
         </div>
         {/* <div id="nav-links"> */}

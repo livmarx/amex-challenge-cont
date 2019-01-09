@@ -38,6 +38,10 @@ html {
   width: 300px;
 }
 
+.single-article:hover {
+  opacity: 0.3;
+}
+
 .single-article img {
   width: 200px;
 }
@@ -87,6 +91,12 @@ html {
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.bookself-img:hover {
+  opacity: 0.3;
 }
 
 #footer {
@@ -99,6 +109,8 @@ html {
   bottom: 0;
   width: 100%;
   margin-top: 100px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 #nav img {
   margin: 0;
