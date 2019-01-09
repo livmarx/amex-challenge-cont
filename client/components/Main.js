@@ -20,9 +20,9 @@ class Main extends React.Component {
             Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
             Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
           </p>
-          <Articles />
-          <Footer />
         </div>
+        <Articles />
+        <Footer />
       </div>
     );
   }

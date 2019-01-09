@@ -2,6 +2,7 @@ import { getBooks, getBooksByAuthor, getBooksByISBN } from '../reducers/books';
 import { connect } from 'react-redux';
 import React from 'react';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 const sortByTitle = function(a, b) {
   const titleA = a.title.toLowerCase(),
@@ -38,27 +39,27 @@ class SearchBars extends React.Component {
   handleChange(event) {
     event.preventDefault();
     const eventTarget = event.target.name;
-    console.log('event.target.value:', event.target.value);
     if (eventTarget === 'title') {
       this.setState({ searchInputTitle: event.target.value });
-      console.log('this.state.searchInputTitle:', this.state.searchInputTitle);
     } else if (eventTarget === 'author') {
       this.setState({ searchInputAuthor: event.target.value });
-      console.log(
-        'this.state.searchInputAuthor:',
-        this.state.searchInputAuthor
-      );
     }
   }
 
-  onSubmitTitle() {
+  onSubmitTitle(e) {
+    e.preventDefault();
     console.log('on submit:', this.state.searchInputTitle);
     this.props.fetchBooks(this.state.searchInputTitle);
+    this.setState({ searchInputAuthor: '' });
+    console.log('searchInputAuthor:', this.state.searchInputAuthor);
   }
 
-  onSubmitAuthor() {
+  onSubmitAuthor(e) {
+    e.preventDefault();
     console.log('on submit:', this.state.searchInputAuthor);
     this.props.fetchBooksByAuthor(this.state.searchInputAuthor);
+    this.setState({ searchInputTitle: '' });
+    console.log('searchInputTitle:', this.state.searchInputTitle);
   }
 
   handleSelect(event) {
@@ -103,8 +104,8 @@ class SearchBars extends React.Component {
           <br />
           Sort By:{' '}
           <select id="dropdown" onChange={this.handleSelect}>
+            <option value="Author: a-z ">Author: a-z </option>
             <option value="Title: a-z">Title: a-z</option>
-            <option value="Author: a-z">Author: a-z</option>
           </select>
         </div>
 
@@ -114,11 +115,6 @@ class SearchBars extends React.Component {
               .filter(book => book.isbn)
               .map((book, i) => (
                 <div className="book-card" key={i}>
-                  {console.log('book.isbn', book.isbn)}
-                  {console.log(
-                    'Array.isArray(book.isbn)',
-                    Array.isArray(book.isbn)
-                  )}
                   <a href={`https://openlibrary.org/${book.seed[0]}/`}>
                     <h3>{book.title}</h3>
                   </a>
@@ -130,6 +126,7 @@ class SearchBars extends React.Component {
             <div />
           )}
         </div>
+        <Footer />
       </div>
     );
   }

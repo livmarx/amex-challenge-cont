@@ -8,10 +8,38 @@ html {
   background-image: url('https://www.freepik.com/free-vector/transparent-background-curve_1306397.htm');
   background-repeat: no-repeat;
 }
-
+#main {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+#about {
+  text-align: center;
+}
+#about p {
+  width: 600px;
+  text-align: center;
+}
 #search-bars {
   display: flex;
   justify-content: space-around;
+}
+
+#articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.single-article {
+  background-color: #bbd2f7;
+  border-radius: 10%;
+  margin: 15px;
+  opacity: 0.8;
+  width: 300px;
+}
+
+.single-article img {
+  width: 200px;
 }
 
 #id-search {
@@ -53,9 +81,24 @@ html {
 
 #nav {
   display: flex;
-  background-color: white;
-  opacity: 0.5;
+  background-color: #bbd2f7;
+  opacity: 0.8;
   text-align: left;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #bbd2f7;
+  opacity: 0.8;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100px;
 }
 #nav img {
   margin: 0;

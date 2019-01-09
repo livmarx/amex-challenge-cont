@@ -2,6 +2,7 @@ import { getBooksByISBN } from '../reducers/books';
 import { connect } from 'react-redux';
 import React from 'react';
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 class SearchBarsId extends React.Component {
   constructor() {
@@ -50,11 +51,15 @@ class SearchBarsId extends React.Component {
                 onClick={this.onSubmitIdNumber}
               />
             </div>
+          </div>
+          <div id="id-search">
             <div className="input-feild">
               Search by OCLC:{'  '}
               <input type="text" name="OCLC" onChange={this.handleChange} />
               <input type="submit" value="Search" onClick={this.onSubmitISBN} />
             </div>
+          </div>
+          <div id="id-search">
             <div className="input-feild">
               Search by LCCN:{'  '}
               <input type="text" name="LCCN" onChange={this.handleChange} />
@@ -64,6 +69,8 @@ class SearchBarsId extends React.Component {
                 onClick={this.onSubmitIdNumber}
               />
             </div>
+          </div>
+          <div id="id-search">
             <div className="input-feild">
               Search by OLID:{'  '}
               <input type="text" name="OLID" onChange={this.handleChange} />
@@ -94,6 +101,7 @@ class SearchBarsId extends React.Component {
             <div />
           )}
         </div>
+        <Footer />
       </div>
     );
   }
