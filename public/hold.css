@@ -161,13 +161,6 @@ h1 {
   width: 800px;
 }
 
-.search-bars-id {
-  display: flex;
-  justify-content: space-around;
-  background-color: #9ab5e2;
-  margin: 0 auto;
-  width: 1000px;
-}
 .id-search {
   align-items: space-around;
   padding: 20px;
@@ -186,7 +179,11 @@ h1 {
   flex-wrap: wrap;
 }
 
-.search-body {
+form {
+  padding: 5px;
+}
+
+p {
   width: 910px;
   margin: 0 auto;
   padding: 10px;

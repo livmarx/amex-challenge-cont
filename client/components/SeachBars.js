@@ -72,7 +72,7 @@ class SearchBars extends React.Component {
       <div>
         <NavBar />
         <h1>General Seach</h1>
-        <p>
+        <p className="search-body">
           Here, users can search for books based on title or author last name.
           Use this search to find all your options!
         </p>
@@ -86,10 +86,11 @@ class SearchBars extends React.Component {
                   name="title"
                   value={this.state.searchInputTitle}
                   onChange={this.handleChange}
-                />
+                />{' '}
                 <button
                   type="submit"
                   value="Search"
+                  className="myButton"
                   onClick={this.onSubmitTitle}
                 >
                   Search
@@ -106,10 +107,11 @@ class SearchBars extends React.Component {
                   name="author"
                   value={this.state.searchInputAuthor}
                   onChange={this.handleChange}
-                />
+                />{' '}
                 <button
                   type="submit"
                   value="Search"
+                  className="myButton"
                   onClick={this.onSubmitAuthor}
                 >
                   Search

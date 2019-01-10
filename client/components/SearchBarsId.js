@@ -36,22 +36,27 @@ class SearchBarsId extends React.Component {
       <div>
         <NavBar />
         <h1>Advanced Seach</h1>
-        <p>
+        <p className="search-body">
           At bÜkshelph, we support searches with ISBN, OCLC, OLID, and LCCN.
           This is recomended for finding particular versions of historical texts
           or translated works.
         </p>
         <br />
-        <div id="search-bars">
+        <div className="search-bars">
           <div id="id-search">
             <div className="input-feild">
               <form onSubmit={this.handleSubmit}>
                 Search by ISBN:{'  '}
-                <input type="text" name="ISBN" onChange={this.handleChange} />
+                <input
+                  type="text"
+                  name="ISBN"
+                  onChange={this.handleChange}
+                />{' '}
                 <button
                   type="submit"
                   value="Search"
                   name="ISBN"
+                  className="myButton"
                   onClick={this.onSubmitIdNumber}
                 >
                   Seach
@@ -64,9 +69,11 @@ class SearchBarsId extends React.Component {
               <form>
                 Search by OCLC:{'  '}
                 <input type="text" name="OCLC" onChange={this.handleChange} />
+                {'  '}
                 <button
                   type="submit"
                   value="Search"
+                  className="myButton"
                   onClick={this.onSubmitISBN}
                 >
                   Seach
@@ -74,14 +81,22 @@ class SearchBarsId extends React.Component {
               </form>
             </div>
           </div>
+        </div>
+        <div className="search-bars">
           <div id="id-search">
             <div className="input-feild">
               <form>
                 Search by LCCN:{'  '}
-                <input type="text" name="LCCN" onChange={this.handleChange} />
+                <input
+                  type="text"
+                  name="LCCN"
+                  onChange={this.handleChange}
+                />{' '}
+                {'  '}
                 <button
                   type="submit"
                   value="Search"
+                  className="myButton"
                   onClick={this.onSubmitIdNumber}
                 >
                   Seach
@@ -93,10 +108,16 @@ class SearchBarsId extends React.Component {
             <div className="input-feild">
               <form>
                 Search by OLID:{'  '}
-                <input type="text" name="OLID" onChange={this.handleChange} />
+                <input
+                  type="text"
+                  name="OLID"
+                  onChange={this.handleChange}
+                />{' '}
+                {'  '}
                 <button
                   type="submit"
                   value="Search"
+                  className="myButton"
                   onClick={this.onSubmitIdNumber}
                 >
                   Seach
