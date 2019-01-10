@@ -8,26 +8,52 @@ class SearchBarsId extends React.Component {
   constructor() {
     super();
     this.state = {
-      searchInputIdNumber: '',
-      sortSelection: '',
+      searchInputISBN: '',
+      searchInputOCLC: '',
+      searchInputOLID: '',
+      searchInputLCCN: '',
     };
     this.handleChange = this.handleChange.bind(this);
-    this.onSubmitIdNumber = this.onSubmitIdNumber.bind(this);
+    this.onSubmitISBN = this.onSubmitISBN.bind(this);
+    this.onSubmitOCLC = this.onSubmitOCLC.bind(this);
+    this.onSubmitOLID = this.onSubmitOLID.bind(this);
+    this.onSubmitLCCN = this.onSubmitLCCN.bind(this);
   }
 
   handleChange(event) {
-    this.setState({ searchInputIdNumber: event.target.value });
+    if (event.target.name === 'ISBN') {
+      this.setState({ searchInputISBN: event.target.value });
+    } else if (event.target.name === 'OCLC') {
+      this.setState({ searchInputOCLC: event.target.value });
+    } else if (event.target.name === 'OLID') {
+      this.setState({ searchInputOLID: event.target.value });
+    } else if (event.target.name === 'LCCN') {
+      this.setState({ searchInputLCCN: event.target.value });
+    }
   }
 
   handleSubmit(event) {
     event.preventDefault();
   }
 
-  onSubmitIdNumber(event) {
-    this.props.fetchBooksByISBN(
-      event.target.name,
-      this.state.searchInputIdNumber
-    );
+  onSubmitISBN(event) {
+    this.props.fetchBooksByISBN(event.target.name, this.state.searchInputISBN);
+    this.setState({ searchInputISBN: '' });
+  }
+
+  onSubmitOCLC(event) {
+    this.props.fetchBooksByISBN(event.target.name, this.state.searchInputOCLC);
+    this.setState({ searchInputOCLC: '' });
+  }
+
+  onSubmitOLID(event) {
+    this.props.fetchBooksByISBN(event.target.name, this.state.searchInputOLID);
+    this.setState({ searchInputOLID: '' });
+  }
+
+  onSubmitLCCN(event) {
+    this.props.fetchBooksByISBN(event.target.name, this.state.searchInputLCCN);
+    this.setState({ searchInputLCCN: '' });
   }
 
   render() {
@@ -50,6 +76,7 @@ class SearchBarsId extends React.Component {
                 <input
                   type="text"
                   name="ISBN"
+                  value={this.state.searchInputISBN}
                   onChange={this.handleChange}
                 />{' '}
                 <button
@@ -57,7 +84,7 @@ class SearchBarsId extends React.Component {
                   value="Search"
                   name="ISBN"
                   className="myButton"
-                  onClick={this.onSubmitIdNumber}
+                  onClick={this.onSubmitISBN}
                 >
                   Seach
                 </button>
@@ -68,13 +95,18 @@ class SearchBarsId extends React.Component {
             <div className="input-feild">
               <form>
                 Search by OCLC:{'  '}
-                <input type="text" name="OCLC" onChange={this.handleChange} />
+                <input
+                  type="text"
+                  name="OCLC"
+                  value={this.state.searchInputOCLC}
+                  onChange={this.handleChange}
+                />
                 {'  '}
                 <button
                   type="submit"
                   value="Search"
                   className="myButton"
-                  onClick={this.onSubmitISBN}
+                  onClick={this.onSubmitOCLC}
                 >
                   Seach
                 </button>
@@ -90,6 +122,7 @@ class SearchBarsId extends React.Component {
                 <input
                   type="text"
                   name="LCCN"
+                  value={this.state.searchInputLCCN}
                   onChange={this.handleChange}
                 />{' '}
                 {'  '}
@@ -97,7 +130,7 @@ class SearchBarsId extends React.Component {
                   type="submit"
                   value="Search"
                   className="myButton"
-                  onClick={this.onSubmitIdNumber}
+                  onClick={this.onSubmitLCCN}
                 >
                   Seach
                 </button>
@@ -111,6 +144,7 @@ class SearchBarsId extends React.Component {
                 <input
                   type="text"
                   name="OLID"
+                  value={this.state.searchInputOLID}
                   onChange={this.handleChange}
                 />{' '}
                 {'  '}
@@ -118,7 +152,7 @@ class SearchBarsId extends React.Component {
                   type="submit"
                   value="Search"
                   className="myButton"
-                  onClick={this.onSubmitIdNumber}
+                  onClick={this.onSubmitOLID}
                 >
                   Seach
                 </button>
