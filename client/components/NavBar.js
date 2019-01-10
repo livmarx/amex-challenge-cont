@@ -15,13 +15,19 @@ class NavBar extends React.Component {
         </div>
         <div className="nav-links">
           <Link to="/" className="single-link">
-            Home
+            <button type="button" className="myButton">
+              Home
+            </button>
           </Link>
           <Link to="/wideSearch" className="single-link">
-            General Search
+            <button type="button" className="myButton">
+              General Search
+            </button>
           </Link>
           <Link to="/idSearch" className="single-link">
-            Advanced Search
+            <button type="button" className="myButton">
+              Advanced Search
+            </button>
           </Link>
         </div>
       </nav>

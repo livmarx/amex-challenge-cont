@@ -13,25 +13,39 @@ class Footer extends React.Component {
             />
           </Link>
         </div>
-        <a
-          href="https://twitter.com/openlibrary?ref_src=twsrc%5Etfw"
-          data-related="OpenLibrary"
-          data-show-count="false"
-        >
-          <p>Follow @openlibrary</p>
-        </a>
+        <div className="nav-links">
+          <a
+            href="https://twitter.com/openlibrary?ref_src=twsrc%5Etfw"
+            data-related="OpenLibrary"
+            data-show-count="false"
+            className="single-link"
+          >
+            <button type="button" className="myButton">
+              <p>Follow @openlibrary</p>
+            </button>
+          </a>
 
-        <a
-          href="https://github.com/livmarx"
-          data-size="large"
-          aria-label="Follow @livmarx on GitHub"
-        >
-          <p>Follow @livmarx</p>
-        </a>
-        <a href="https://openlibrary.org/developers/api">
-          <p>Powered by Open Library</p>
-        </a>
-        {/* </div> */}
+          <a
+            href="https://github.com/livmarx"
+            data-size="large"
+            aria-label="Follow @livmarx on GitHub"
+            className="single-link"
+          >
+            {' '}
+            <button type="button" className="myButton">
+              <p>Follow @livmarx</p>
+            </button>
+          </a>
+          <a
+            href="https://openlibrary.org/developers/api"
+            className="single-link"
+          >
+            {' '}
+            <button type="button" className="myButton">
+              <p>Powered by Open Library</p>
+            </button>
+          </a>
+        </div>
       </div>
     );
   }
