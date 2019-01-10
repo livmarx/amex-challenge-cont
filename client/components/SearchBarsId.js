@@ -38,6 +38,7 @@ class SearchBarsId extends React.Component {
 
   onSubmitISBN(event) {
     this.props.fetchBooksByISBN(event.target.name, this.state.searchInputISBN);
+
     this.setState({ searchInputISBN: '' });
   }
 
@@ -58,6 +59,7 @@ class SearchBarsId extends React.Component {
 
   render() {
     const book = this.props.book;
+
     return (
       <div>
         <NavBar />
@@ -163,17 +165,22 @@ class SearchBarsId extends React.Component {
         <div id="book-by-id">
           {book ? (
             <div className="book-card">
+              <h3> {book.title}</h3>
+              <h5>{this.props.bookDetails.details.subtitle}</h5>
+              <h5>Written by {book.authors[0].name}</h5>
+              <p>{this.props.bookDetails.details.description}</p>
               <a href={book.url}>
-                <h3> {book.title}</h3>
-                <h4>{book.subtitle}</h4>
-                <h5>Written by {book.authors[0].name}</h5>
-
-                {book.cover ? (
-                  <img src={book.cover.large} />
-                ) : (
-                  <img src="https://www.globalenergy.com.sa/wp-content/uploads/2015/11/sempreview.jpg" />
-                )}
+                <button type="button" className="myButton">
+                  More details
+                </button>
               </a>
+              <br />
+              <br />
+              {book.cover ? (
+                <img src={book.cover.large} />
+              ) : (
+                <img src="https://www.globalenergy.com.sa/wp-content/uploads/2015/11/sempreview.jpg" />
+              )}
             </div>
           ) : (
             <div />
@@ -188,7 +195,11 @@ class SearchBarsId extends React.Component {
 // connect component to redux store:
 
 const mapStateToProps = state => {
-  return { book: state.book };
+  return {
+    book: state.bookData,
+    bookDetails: state.bookDetails,
+    searchInput: state.searchInput,
+  };
 };
 
 const mapDispatchToProps = dispatch => {

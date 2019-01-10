@@ -16,9 +16,11 @@ export const gotBooksByAuthor = books => ({
   books,
 });
 
-export const gotBooksByISBN = books => ({
+export const gotBooksByISBN = (bookData, bookDetails, searchInput) => ({
   type: GOT_BOOKS_BY_ISBN,
-  books,
+  bookData,
+  bookDetails,
+  searchInput,
 });
 
 // thunk creator:
@@ -46,11 +48,15 @@ export const getBooksByAuthor = searchInput => {
 
 export const getBooksByISBN = (idType, searchInput) => {
   return async dispatch => {
-    const res = await axios.get(
+    const dataRes = await axios.get(
       `https://openlibrary.org/api/books?bibkeys=${idType}:${searchInput}&jscmd=data&format=json`
     );
-    const book = res.data[`${idType}:${searchInput}`];
-    const currAction = gotBooksByISBN(book);
+    const detailsRes = await axios.get(
+      `https://openlibrary.org/api/books?bibkeys=${idType}:${searchInput}&jscmd=details&format=json`
+    );
+    const bookData = dataRes.data[`${idType}:${searchInput}`];
+    const bookDetails = detailsRes.data[`${idType}:${searchInput}`];
+    const currAction = gotBooksByISBN(bookData, bookDetails, searchInput);
     dispatch(currAction);
   };
 };
@@ -59,6 +65,8 @@ export const getBooksByISBN = (idType, searchInput) => {
 const initialState = {
   books: [],
   book: '',
+  bookInfo: '',
+  searchInput: '',
 };
 
 // reducer:
@@ -69,7 +77,11 @@ function bookReducer(state = initialState, action) {
     case GOT_BOOKS_BY_AUTHOR:
       return { books: action.books };
     case GOT_BOOKS_BY_ISBN:
-      return { book: action.books };
+      return {
+        bookData: action.bookData,
+        bookDetails: action.bookDetails,
+        searchInput: action.searchInput,
+      };
     default:
       return state;
   }

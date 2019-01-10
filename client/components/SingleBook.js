@@ -1,35 +1,85 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import { getBooksByISBN } from '../reducers/books';
+import { connect } from 'react-redux';
+import React from 'react';
+import NavBar from './NavBar';
+import Footer from './Footer';
 
-export default class SingleAircraft extends Component {
-  constructor(props) {
-    super(props);
+class SingleBook extends React.Component {
+  constructor() {
+    super();
     this.state = {
-      coverArtUrl: '',
-      publishDate: '',
+      title: '',
+      subtitle: '',
       author: '',
+      description: '',
+      cover: '',
     };
   }
 
-  async componentWillMount(isbn) {
-    result = await axios.get(
-      'http://openlibrary.org/api/volumes/brief/isbn/${isbn}.json'
-    );
-    const cover = result.records.items[0].cover.large;
-    this.setState({ coverArtUrl: cover });
+  async componentDidMount() {
+    const isbnFromUrl = this.props.match.params.isbn;
+    await this.props.fetchBooksByISBN('ISBN', isbnFromUrl);
+    this.setState({
+      title: this.props.book.title,
+      subtitle: this.props.bookDetails.details.subtitle,
+      author: this.props.book.authors[0].name,
+      description: this.props.bookDetails.details.description,
+      cover:
+        'https://www.globalenergy.com.sa/wp-content/uploads/2015/11/sempreview.jpg',
+      url: this.props.book.url,
+    });
   }
 
   render() {
+    const book = this.props.book;
     return (
       <div>
-        <h1>Single Book Component</h1>
-        <img
-          src={this.state.coverArtUrl}
-          alt="Smiley face"
-          height="42"
-          width="42"
-        />{' '}
+        <NavBar />
+        {book ? (
+          <div>
+            <h1> {this.state.title}</h1>
+            <h3>{this.state.subtitle}</h3>
+            <h3>Written by {this.state.author}</h3>
+            <h3>{this.state.subtitle}</h3>
+            {this.props.book.cover ? (
+              <img src={this.props.book.cover.large} />
+            ) : (
+              <img src={this.state.cover} />
+            )}
+            <p>{this.state.description}</p>
+          </div>
+        ) : (
+          <div>NO</div>
+        )}
+        <a href={this.state.url}>
+          <button type="button" className="myButton">
+            More details
+          </button>
+        </a>
+        <Footer />
       </div>
     );
   }
 }
+
+// connect component to redux store:
+
+const mapStateToProps = state => {
+  return {
+    book: state.bookData,
+    bookDetails: state.bookDetails,
+    searchInput: state.searchInput,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchBooksByISBN: (idType, searchInputIdNumber) =>
+      dispatch(getBooksByISBN(idType, searchInputIdNumber)),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SingleBook);

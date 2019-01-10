@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const sortByTitle = function(a, b) {
   const titleA = a.title.toLowerCase(),
@@ -71,6 +72,7 @@ class SearchBars extends React.Component {
     return (
       <div>
         <NavBar />
+
         <h1>General Seach</h1>
         <p className="search-body">
           Here, users can search for books based on title or author last name.
@@ -135,11 +137,13 @@ class SearchBars extends React.Component {
               .filter(book => book.isbn)
               .map((book, i) => (
                 <div className="book-card" key={i}>
-                  <a href={`https://openlibrary.org/${book.seed[0]}/`}>
-                    <h3>{book.title}</h3>
-                  </a>
-                  <br />
-                  <h4>Written by {book.author_name}</h4>
+                  <button type="button" className="myButton">
+                    <Link to={`/${book.isbn[0]}`}>
+                      <h3>{book.title}</h3>
+                      <br />
+                      <h4>Written by {book.author_name}</h4>
+                    </Link>
+                  </button>
                 </div>
               ))
           ) : (

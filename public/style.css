@@ -180,7 +180,7 @@ h1 {
   text-align: left;
 }
 
-#book-by-title-author {
+.book-by-title-author {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -200,6 +200,8 @@ h1 {
 
 .book-card a h3 {
   margin: 0;
+  color: whitesmoke;
+  text-decoration: none;
 }
 .book-card h4 {
   margin: 0;
