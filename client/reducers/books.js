@@ -27,7 +27,7 @@ export const gotBooksByISBN = (bookData, bookDetails, searchInput) => ({
 export const getBooks = searchInput => {
   return async dispatch => {
     const res = await axios.get(
-      `http://openlibrary.org/search.json?title==${searchInput}`
+      `https://openlibrary.org/search.json?title==${searchInput}`
     );
     const books = res.data.docs;
     const currAction = gotBooks(books);
@@ -38,7 +38,7 @@ export const getBooks = searchInput => {
 export const getBooksByAuthor = searchInput => {
   return async dispatch => {
     const res = await axios.get(
-      `http://openlibrary.org/search.json?author=${searchInput}`
+      `https://openlibrary.org/search.json?author=${searchInput}`
     );
     const books = res.data.docs;
     const currAction = gotBooksByAuthor(books);

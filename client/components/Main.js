@@ -25,6 +25,7 @@ class Main extends React.Component {
             Because at bÜkshelph, we believe that everyone should have the
             freedom to stay inside.
           </p>
+          <h6>----------------------------------------</h6>
           <p>
             Use our General Search to find books by your favorite author or all
             the books from your favorite series. For you serious book-worms, we
@@ -33,6 +34,11 @@ class Main extends React.Component {
             OLID, and LCCN.
           </p>
           <p>Happy reading to you and yours!</p>
+          <h6>----------------------------------------</h6>
+          <p>
+            If you don't know where to start your reading journy, check out the
+            articles below!
+          </p>
         </div>
         <Articles />
         <Footer />
