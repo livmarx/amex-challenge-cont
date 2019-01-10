@@ -15,6 +15,12 @@ app.use(express.json());
 // public:
 console.log('dirname', __dirname);
 app.use(express.static(__dirname + '/public'));
+// app.get('*', function(req, res) {
+//   res.send('root');
+// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/public/index.html'));
+}); // Send index.html for any other requests
 
 const PORT = process.env.PORT || 8000;
 

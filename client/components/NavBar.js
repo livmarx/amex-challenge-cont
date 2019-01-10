@@ -15,10 +15,10 @@ class NavBar extends React.Component {
             Home
           </Link>
           <Link to="/wideSearch" className="single-link">
-            Wide Search
+            General Search
           </Link>
           <Link to="/idSearch" className="single-link">
-            Specific Search
+            Advanced Search
           </Link>
         </div>
       </nav>

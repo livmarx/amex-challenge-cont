@@ -50,7 +50,7 @@ class SearchBars extends React.Component {
     e.preventDefault();
     console.log('on submit:', this.state.searchInputTitle);
     this.props.fetchBooks(this.state.searchInputTitle);
-    this.setState({ searchInputAuthor: '' });
+    this.setState({ searchInputTitle: '', searchInputAuthor: '' });
     console.log('searchInputAuthor:', this.state.searchInputAuthor);
   }
 
@@ -58,7 +58,7 @@ class SearchBars extends React.Component {
     e.preventDefault();
     console.log('on submit:', this.state.searchInputAuthor);
     this.props.fetchBooksByAuthor(this.state.searchInputAuthor);
-    this.setState({ searchInputTitle: '' });
+    this.setState({ searchInputTitle: '', searchInputAuthor: '' });
     console.log('searchInputTitle:', this.state.searchInputTitle);
   }
 
@@ -76,12 +76,22 @@ class SearchBars extends React.Component {
     return (
       <div>
         <NavBar />
+        <h1>General Seach</h1>
+        <p>
+          Here, users can search for books based on title or author last name.
+          Use this search to find all your options!
+        </p>
         <div id="search-bars">
           <div id="general-search">
             <div className="input-feild">
               <form>
                 Search by title:{'  '}
-                <input type="text" name="title" onChange={this.handleChange} />
+                <input
+                  type="text"
+                  name="title"
+                  value={this.state.searchInputTitle}
+                  onChange={this.handleChange}
+                />
                 <button
                   type="submit"
                   value="Search"
@@ -96,7 +106,12 @@ class SearchBars extends React.Component {
             <div className="input-feild">
               <form>
                 Search by author:{'  '}
-                <input type="text" name="author" onChange={this.handleChange} />
+                <input
+                  type="text"
+                  name="author"
+                  value={this.state.searchInputAuthor}
+                  onChange={this.handleChange}
+                />
                 <button
                   type="submit"
                   value="Search"

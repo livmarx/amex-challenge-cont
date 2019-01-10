@@ -11,13 +11,13 @@ html {
 #main {
   margin-top: 150px;
   margin-bottom: 150px;
-}
-#about {
   text-align: center;
 }
+
 #about p {
   width: 600px;
-  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
 }
 #search-bars {
   display: flex;

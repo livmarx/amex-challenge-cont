@@ -11,19 +11,29 @@ class Footer extends React.Component {
           </Link>
         </div>
         {/* <div id="nav-links"> */}
-        <a href="https://twitter.com/OpenLibrary">
-          <p>Follow us: </p>
-          <img
-            src="https://www.clipartmax.com/png/small/15-154782_clipart-bird-transparent-background-cliparts-free-download-twitter-logo.png"
-            height="50"
-          />
+        <a
+          href="https://twitter.com/openlibrary?ref_src=twsrc%5Etfw"
+          class="twitter-follow-button"
+          data-related="OpenLibrary"
+          data-show-count="false"
+        >
+          <p>Follow @openlibrary</p>
+        </a>
+        <script
+          async
+          src="https://platform.twitter.com/widgets.js"
+          charset="utf-8"
+        />
+        <a
+          class="github-button"
+          href="https://github.com/livmarx"
+          data-size="large"
+          aria-label="Follow @livmarx on GitHub"
+        >
+          <p>Follow @livmarx</p>
         </a>
         <a href="https://openlibrary.org/developers/api">
-          <p>API Doc: </p>
-          <img
-            src="http://www.soidergi.com/wp-content/uploads/co/thumb-computer-vector-icon-isolated-on-transparent-background-computer-logo-concept-image.jpg"
-            height="50"
-          />
+          <p>Powered by Open Library</p>
         </a>
         {/* </div> */}
       </div>

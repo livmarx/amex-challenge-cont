@@ -39,46 +39,73 @@ class SearchBarsId extends React.Component {
     return (
       <div>
         <NavBar />
+        <h1>Advanced Seach</h1>
+        <p>
+          At bÜkshelph, we support searches with ISBN, OCLC, OLID, and LCCN.
+          This is recomended for finding particular versions of historical texts
+          or translated works.
+        </p>
+        <br />
         <div id="search-bars">
           <div id="id-search">
             <div className="input-feild">
-              Search by ISBN:{'  '}
-              <input type="text" name="ISBN" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                name="ISBN"
-                onClick={this.onSubmitIdNumber}
-              />
+              <form>
+                Search by ISBN:{'  '}
+                <input type="text" name="ISBN" onChange={this.handleChange} />
+                <button
+                  type="submit"
+                  value="Search"
+                  name="ISBN"
+                  onClick={this.onSubmitIdNumber}
+                >
+                  Seach
+                </button>
+              </form>
             </div>
           </div>
           <div id="id-search">
             <div className="input-feild">
-              Search by OCLC:{'  '}
-              <input type="text" name="OCLC" onChange={this.handleChange} />
-              <input type="submit" value="Search" onClick={this.onSubmitISBN} />
+              <form>
+                Search by OCLC:{'  '}
+                <input type="text" name="OCLC" onChange={this.handleChange} />
+                <button
+                  type="submit"
+                  value="Search"
+                  onClick={this.onSubmitISBN}
+                >
+                  Seach
+                </button>
+              </form>
             </div>
           </div>
           <div id="id-search">
             <div className="input-feild">
-              Search by LCCN:{'  '}
-              <input type="text" name="LCCN" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                onClick={this.onSubmitIdNumber}
-              />
+              <form>
+                Search by LCCN:{'  '}
+                <input type="text" name="LCCN" onChange={this.handleChange} />
+                <button
+                  type="submit"
+                  value="Search"
+                  onClick={this.onSubmitIdNumber}
+                >
+                  Seach
+                </button>
+              </form>
             </div>
           </div>
           <div id="id-search">
             <div className="input-feild">
-              Search by OLID:{'  '}
-              <input type="text" name="OLID" onChange={this.handleChange} />
-              <input
-                type="submit"
-                value="Search"
-                onClick={this.onSubmitIdNumber}
-              />
+              <form>
+                Search by OLID:{'  '}
+                <input type="text" name="OLID" onChange={this.handleChange} />
+                <button
+                  type="submit"
+                  value="Search"
+                  onClick={this.onSubmitIdNumber}
+                >
+                  Seach
+                </button>
+              </form>
             </div>
           </div>
         </div>
