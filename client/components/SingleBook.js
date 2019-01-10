@@ -41,21 +41,22 @@ class SingleBook extends React.Component {
             <h3>{this.state.subtitle}</h3>
             <h3>Written by {this.state.author}</h3>
             <h3>{this.state.subtitle}</h3>
+            <a href={this.state.url}>
+              <button type="button" className="myButton">
+                More details
+              </button>
+              <p>{this.state.description}</p>
+            </a>
             {this.props.book.cover ? (
               <img src={this.props.book.cover.large} />
             ) : (
               <img src={this.state.cover} />
             )}
-            <p>{this.state.description}</p>
           </div>
         ) : (
           <div>NO</div>
         )}
-        <a href={this.state.url}>
-          <button type="button" className="myButton">
-            More details
-          </button>
-        </a>
+
         <Footer />
       </div>
     );

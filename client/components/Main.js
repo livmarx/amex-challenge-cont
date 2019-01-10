@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBars from './SeachBars';
 import NavBar from './NavBar';
 import Articles from './Articles';
 import Footer from './Footer';
@@ -10,9 +9,7 @@ class Main extends React.Component {
       <div id="main">
         <NavBar />
         <div className="title">
-          <img src="bookshelf.png" height="100" className="bookself-img" />
           <h1>bÜkshelph</h1>
-          <img src="bookshelf.png" height="100" className="bookself-img" />
         </div>
         <br />
         <div id="about">
