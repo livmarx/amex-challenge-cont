@@ -4,13 +4,16 @@ import { Link } from 'react-router-dom';
 class NavBar extends React.Component {
   render() {
     return (
-      <nav id="nav">
-        <div id="na-logo">
+      <nav className="nav">
+        <div className="logo">
           <Link to="/" className="single-link">
-            <img src="bookshelf.png" height="100" className="bookself-img" />
+            <img
+              src="https://unixtitan.net/images/book-clipart-5.png"
+              className="bookself-img"
+            />
           </Link>
         </div>
-        <div id="nav-links">
+        <div className="nav-links">
           <Link to="/" className="single-link">
             Home
           </Link>

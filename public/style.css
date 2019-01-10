@@ -8,21 +8,37 @@ html {
   background-image: url('https://www.freepik.com/free-vector/transparent-background-curve_1306397.htm');
   background-repeat: no-repeat;
 }
+
+/* ------------Main Page: --------------- */
 #main {
   margin-top: 150px;
   margin-bottom: 150px;
   text-align: center;
 }
+.title {
+  display: flex;
+  justify-content: center;
+}
 
+.title img {
+  opacity: 0.5;
+}
+.title h1 {
+  margin-top: 15px;
+  /* margin: 0; */
+}
+#about {
+  margin: 10px 10px 40px 10px;
+}
 #about p {
   width: 600px;
   margin: 0 auto;
   padding: 10px;
+  background-color: royalblue;
+  opacity: 0.7;
 }
-#search-bars {
-  display: flex;
-  justify-content: space-around;
-}
+
+/* ---------- Articles on main page: -------------- */
 
 #articles {
   display: flex;
@@ -46,23 +62,24 @@ html {
   width: 200px;
 }
 
-#id-search {
+/* --------Seach Pages: ------------*/
+.search-bars {
+  display: flex;
+  justify-content: space-around;
+  background-color: #9ab5e2;
+  margin: 0 auto;
+  width: 800px;
+}
+.id-search {
   align-items: space-around;
-  border: solid 5px #373289;
   padding: 20px;
   text-align: left;
-  background-color: #9ab5e2;
 }
 
-#general-search {
+.general-search {
   align-items: space-around;
-  border: solid 5px #373289;
   padding: 20px;
   text-align: left;
-  background-color: #9ab5e2;
-}
-#general-search .input-feild {
-  padding: 12px;
 }
 
 #book-by-title-author {
@@ -83,8 +100,9 @@ html {
   margin: 0;
 }
 
-#nav {
+.nav {
   display: flex;
+  height: 60px;
   background-color: #bbd2f7;
   opacity: 0.8;
   text-align: left;
@@ -95,13 +113,16 @@ html {
   border-bottom-right-radius: 5px;
 }
 
-.bookself-img:hover {
-  opacity: 0.3;
+.nav img {
+  height: 40px;
+  padding: 10px;
 }
 
-#footer {
+.footer {
   display: flex;
   flex-direction: row;
+  height: 60px;
+
   background-color: #bbd2f7;
   opacity: 0.8;
   text-align: left;
@@ -112,9 +133,10 @@ html {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-#nav img {
-  margin: 0;
-  padding: 0;
+
+.footer img {
+  height: 40px;
+  padding: 10px;
 }
 
 #nav #nav-links {
@@ -132,210 +154,3 @@ html {
 h1 {
   font-size: 60px;
 }
-
-/* ------------Taboola code below: ------------------- */
-
-/* .main {
-  background-color: #80ced6;
-  padding: 1em;
-  width: 800px;
-  border: solid 5px darkslategrey;
-}
-
-h4 {
-  margin: 0%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  color: darkslategrey;
-  overflow: hidden;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-h6 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #618685;
-  margin-right: 30px;
-  padding-top: 10px;
- }
-
-.header h4 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  padding-top: 25px;
-  padding-left: 30px;
-}
-
-p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 12px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.events {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0.5em;
-}  */
-/* .event {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: flex-start;
-  height: 280px;
-  width: 200px;
-  background-color: #d5f4e6;
-  border-style: solid;
-  border-color: #618685;
-  border-width: 7px;
-  border-radius: 4%;
-  padding: 10px;
-  margin: 10px;
-}
-
-img {
-  width: 190px;
-  padding: 0px;
-  margin: 0px;
-  justify-content: center;
-}
-
-.last-line {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@media only screen and (min-width: 850px) {
-  .main {
-    width: 800px;
-  }
-} */
-/*
-@media only screen and (max-width: 690px) {
-  .header {
-    flex-direction: column;
-  }
-  .header h6 {
-    margin-left: 30px;
-  }
-}
-
-h4:hover {
-  opacity: 0.5;
-} */
-/*
-img:hover {
-  opacity: 0.5;
-}
-
-.branding:hover {
-  opacity: 0.5;
-}
-
-.main {
-  background-color: #80ced6;
-  padding: 1em;
-  /* width: 800px; */
-/* border: solid 5px darkslategrey;
-} */
-/*
-h4 {
-  margin: 0%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 15px;
-  color: darkslategrey;
-  overflow: hidden;
-} */
-/* .header {
-  display: flex;
-  justify-content: space-between;
-}
-
-h6 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #618685;
-  margin-right: 30px;
-  padding-top: 10px;
-}
-
-.header h4 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 20px;
-  padding-top: 25px;
-  padding-left: 30px;
-}
-
-p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 12px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-} */
-
-/* .events {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0.5em;
-}
-.event {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: flex-start;
-  height: 280px;
-  width: 200px;
-  background-color: #d5f4e6;
-  border-style: solid;
-  border-color: #618685;
-  border-width: 7px;
-  border-radius: 4%;
-  padding: 10px;
-  margin: 10px;
-}
-
-img {
-  width: 190px;
-  padding: 0px;
-  margin: 0px;
-  justify-content: center;
-} */
-/*
-.last-line {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@media only screen and (min-width: 850px) {
-  .main {
-    width: 800px;
-  }
-}
-
-@media only screen and (max-width: 690px) {
-  .header {
-    flex-direction: column;
-  }
-  .header h6 {
-    margin-left: 30px;
-  }
-} */
-/*
-h4:hover {
-  opacity: 0.5;
-}
-img:hover {
-  opacity: 0.5;
-}
-.branding:hover {
-  opacity: 0.5;
-} */

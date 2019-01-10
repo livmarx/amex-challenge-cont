@@ -9,7 +9,11 @@ class Main extends React.Component {
     return (
       <div id="main">
         <NavBar />
-        <h1>bÜkshelph</h1>
+        <div className="title">
+          <img src="bookshelf.png" height="100" className="bookself-img" />
+          <h1>bÜkshelph</h1>
+          <img src="bookshelf.png" height="100" className="bookself-img" />
+        </div>
         <br />
         <div id="about">
           <p>

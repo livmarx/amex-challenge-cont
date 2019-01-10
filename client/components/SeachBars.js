@@ -37,7 +37,6 @@ class SearchBars extends React.Component {
   }
 
   handleChange(event) {
-    event.preventDefault();
     const eventTarget = event.target.name;
     if (eventTarget === 'title') {
       this.setState({ searchInputTitle: event.target.value });
@@ -48,18 +47,14 @@ class SearchBars extends React.Component {
 
   onSubmitTitle(e) {
     e.preventDefault();
-    console.log('on submit:', this.state.searchInputTitle);
     this.props.fetchBooks(this.state.searchInputTitle);
     this.setState({ searchInputTitle: '', searchInputAuthor: '' });
-    console.log('searchInputAuthor:', this.state.searchInputAuthor);
   }
 
   onSubmitAuthor(e) {
     e.preventDefault();
-    console.log('on submit:', this.state.searchInputAuthor);
     this.props.fetchBooksByAuthor(this.state.searchInputAuthor);
     this.setState({ searchInputTitle: '', searchInputAuthor: '' });
-    console.log('searchInputTitle:', this.state.searchInputTitle);
   }
 
   handleSelect(event) {
@@ -81,8 +76,8 @@ class SearchBars extends React.Component {
           Here, users can search for books based on title or author last name.
           Use this search to find all your options!
         </p>
-        <div id="search-bars">
-          <div id="general-search">
+        <div className="search-bars">
+          <div className="general-search">
             <div className="input-feild">
               <form>
                 Search by title:{'  '}
@@ -102,7 +97,7 @@ class SearchBars extends React.Component {
               </form>
             </div>
           </div>
-          <div id="general-search">
+          <div className="general-search">
             <div className="input-feild">
               <form>
                 Search by author:{'  '}
@@ -126,13 +121,13 @@ class SearchBars extends React.Component {
         <div className="dd-menu">
           <br />
           Sort By:{' '}
-          <select id="dropdown" onChange={this.handleSelect}>
+          <select className="dropdown" onChange={this.handleSelect}>
             <option value="Author: a-z ">Author: a-z </option>
             <option value="Title: a-z">Title: a-z</option>
           </select>
         </div>
 
-        <div id="book-by-title-author">
+        <div className="book-by-title-author">
           {books ? (
             books
               .filter(book => book.isbn)

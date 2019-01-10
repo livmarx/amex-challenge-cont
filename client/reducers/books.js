@@ -27,7 +27,6 @@ export const getBooks = searchInput => {
     const res = await axios.get(
       `http://openlibrary.org/search.json?title==${searchInput}`
     );
-    console.log('res in index.js', res);
     const books = res.data.docs;
     const currAction = gotBooks(books);
     dispatch(currAction);
@@ -39,7 +38,6 @@ export const getBooksByAuthor = searchInput => {
     const res = await axios.get(
       `http://openlibrary.org/search.json?author=${searchInput}`
     );
-    console.log('res in index.js', res);
     const books = res.data.docs;
     const currAction = gotBooksByAuthor(books);
     dispatch(currAction);
@@ -52,8 +50,6 @@ export const getBooksByISBN = (idType, searchInput) => {
       `https://openlibrary.org/api/books?bibkeys=${idType}:${searchInput}&jscmd=data&format=json`
     );
     const book = res.data[`${idType}:${searchInput}`];
-    console.log('bookInfo', book);
-    console.log('bookInfobib_key', book[`${idType}:${searchInput}`]);
     const currAction = gotBooksByISBN(book);
     dispatch(currAction);
   };

@@ -16,18 +16,14 @@ class SearchBarsId extends React.Component {
   }
 
   handleChange(event) {
-    event.preventDefault();
-    const eventTarget = event.target.name;
     this.setState({ searchInputIdNumber: event.target.value });
-    console.log(
-      'this.state.searchInputIdNumber:',
-      this.state.searchInputIdNumber
-    );
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
   }
 
   onSubmitIdNumber(event) {
-    console.log('on submit:', this.state.searchInputIdNumber);
-    console.log('event.target.name:', event.target.name);
     this.props.fetchBooksByISBN(
       event.target.name,
       this.state.searchInputIdNumber
@@ -49,7 +45,7 @@ class SearchBarsId extends React.Component {
         <div id="search-bars">
           <div id="id-search">
             <div className="input-feild">
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 Search by ISBN:{'  '}
                 <input type="text" name="ISBN" onChange={this.handleChange} />
                 <button
