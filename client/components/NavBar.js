@@ -26,32 +26,31 @@ class NavBar extends React.Component {
           <i className="fas fa-bars" />
         </span>
         <Link to="/" className="logo">
-          {/* <img
-              src="https://unixtitan.net/images/book-clipart-5.png"
-              className="bookself-img"
-            /> */}
-          logo
+          <img
+            src="https://unixtitan.net/images/book-clipart-5.png"
+            className="bookself-img"
+          />
         </Link>
         <ul className="main-nav" id="js-menu">
           <li>
             <Link to="/" className="nav-links">
-              {/* <button type="button" className="myButton"> */}
-              Home
-              {/* </button> */}
+              <button type="button" className="myButton">
+                Home
+              </button>
             </Link>
           </li>
           <li>
             <Link to="/general-search" className="nav-links">
-              {/* <button type="button" className="myButton"> */}
-              General Search
-              {/* </button> */}
+              <button type="button" className="myButton">
+                General Search
+              </button>
             </Link>
           </li>
           <li>
             <Link to="/advanced-search" className="nav-links">
-              {/* <button type="button" className="myButton"> */}
-              Advanced Search
-              {/* </button> */}
+              <button type="button" className="myButton">
+                Advanced Search
+              </button>
             </Link>
           </li>
         </ul>
