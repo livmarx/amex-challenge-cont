@@ -220,6 +220,10 @@ h1 {
   width: 200px;
 }
 
+.single-article h4 {
+  color: tomato;
+}
+
 /* --------Seach Pages: ------------*/
 .search-bars {
   display: flex;
