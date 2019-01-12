@@ -9,6 +9,12 @@ html {
   background-repeat: no-repeat;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 /* ------------Main Page: ------------- */
 #main {
   margin-top: 150px;
@@ -19,6 +25,9 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.bukshelph {
 }
 
 .title img {
@@ -42,6 +51,48 @@ h1 {
 }
 /* ----- Nav and footer: ----------- */
 
+.navbar {
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+  margin: 15px auto;
+}
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.main-nav li {
+  text-align: center;
+}
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+/*
+
+.
 .nav {
   display: flex;
   height: 60px;
@@ -56,12 +107,15 @@ h1 {
 }
 
 .nav img {
-  display: inline;
-  height: 40px;
+  height: 60px;
   padding: 10px;
 }
 
-.footer {
+.nav-links {
+  overflow: hidden;
+} */
+
+/* .footer {
   display: flex;
   height: 60px;
   background-color: #bbd2f7;
@@ -76,8 +130,7 @@ h1 {
 }
 
 .footer img {
-  display: inline;
-  height: 40px;
+  height: 60px;
   padding: 10px;
 }
 
@@ -92,7 +145,7 @@ h1 {
   margin: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: whitesmoke;
-}
+} */
 
 /* ---- Buttons: --------- */
 .myButton {
