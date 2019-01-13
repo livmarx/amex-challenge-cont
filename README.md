@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # bukshelph - Amex coding challenge
 
 #### About
@@ -15,3 +16,6 @@ Run `npm install` from with in the reopsitory to make sure you have all the depe
 ### Deployed App:
 
 If you would like to see the deployed version, visit: http://bukshelph.herokuapp.com/
+=======
+# amex-challenge-cont
+>>>>>>> 47c51fc0d78ffc5f50cabbada7e4c2d17b846466
