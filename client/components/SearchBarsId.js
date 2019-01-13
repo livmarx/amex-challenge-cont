@@ -177,9 +177,12 @@ class SearchBarsId extends React.Component {
               <br />
               <br />
               {book.cover ? (
-                <img src={book.cover.large} />
+                <img src={book.cover.large} className="single-book-img" />
               ) : (
-                <img src="https://www.globalenergy.com.sa/wp-content/uploads/2015/11/sempreview.jpg" />
+                <img
+                  src="https://www.globalenergy.com.sa/wp-content/uploads/2015/11/sempreview.jpg"
+                  className="single-book-img"
+                />
               )}
             </div>
           ) : (
