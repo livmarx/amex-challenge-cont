@@ -22,7 +22,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/public/index.html'));
 }); // Send index.html for any other requests
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 const init = async function() {
   // await db.sync();

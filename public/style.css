@@ -227,13 +227,9 @@ h1 {
   opacity: 0.3;
 }
 
-.single-article img {
+.book-card img {
   width: 200px;
 }
-
-/* .single-article h4 {
-  color: tomato;
-} */
 
 /* --------Seach Pages: ------------*/
 .search-bars {
@@ -294,6 +290,43 @@ input {
 
   input {
     width: 200px;
+  }
+}
+
+/* -------- Book card: -------------- */
+.book-card {
+  background-color: #bbd2f7;
+  opacity: 0.7;
+  margin: 20px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 5px 5px 15px #1f4783;
+  border-radius: 2%;
+}
+
+.book-card:hover {
+  box-shadow: 8px 8px 40px #1f4783;
+}
+
+.search-links {
+  color: whitesmoke;
+}
+
+.search-links:hover {
+  color: orange;
+}
+.book-by-title-author {
+  /* display: flex;
+  flex-wrap: wrap; */
+  padding: 20px;
+  /* justify-content: center; */
+  margin: 0px, 200px, 0px, 200px;
+}
+
+@media screen and (min-width: 1500px) {
+  .book-by-title-author {
+    width: 1200px;
+    margin: auto;
   }
 }
 

@@ -4,7 +4,7 @@ class Articles extends React.Component {
   render() {
     return (
       <div id="articles">
-        <div className="single-article" id="art-1">
+        <div className="book-card ">
           <a href="https://www.newyorker.com/culture/2018-in-review/the-twenty-five-most-read-new-yorker-archive-stories-of-2018">
             <h4>
               The Twenty-Five Most-Read New Yorker Archive Stories of 2018
@@ -18,7 +18,7 @@ class Articles extends React.Component {
             <h4>By Erin Overbey</h4>
           </a>
         </div>
-        <div className="single-article" id="art-2">
+        <div className="book-card">
           <a
             href="https://www.newyorker.com/culture/2018-in-review/the-poetry-i-was-grateful-for-in-2018"
             target="_blank"
@@ -34,7 +34,7 @@ class Articles extends React.Component {
             <h4>By Dan Chiasson</h4>
           </a>
         </div>
-        <div className="single-article" id="art-3">
+        <div className="book-card">
           <a href="https://www.businessinsider.com/25-america-classic-books-to-read-2014-1">
             <h4>25 American Classics Everyone Should Read At Least Once</h4>
             <img
@@ -46,7 +46,7 @@ class Articles extends React.Component {
             <h4>By Megan Willett</h4>
           </a>
         </div>
-        <div className="single-article">
+        <div className="book-card">
           <a href="https://www.newyorker.com/culture/2018-in-review/the-best-books-of-2018">
             <h4>The Best Books of 2018</h4>
             <img

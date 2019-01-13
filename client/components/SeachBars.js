@@ -134,24 +134,31 @@ class SearchBars extends React.Component {
           </select>
         </div>
 
-        <div className="book-by-title-author">
-          {books ? (
-            books
-              .filter(book => book.isbn)
-              .map((book, i) => (
-                <div className="book-card" key={i}>
-                  <button type="button" className="myButton">
-                    <Link to={`/${book.isbn[0]}`}>
+        <div className="container">
+          <div className="row justify-content-between">
+            {books ? (
+              books
+                .filter(book => book.isbn)
+                .map((book, i) => (
+                  <div
+                    key={i}
+                    className="col-lg-3 col-md-3 col-sm-6 col-xs-12"
+                    className="book-card"
+                  >
+                    <br />
+                    <Link to={`/${book.isbn[0]}`} className="search-links">
                       <h3>{book.title}</h3>
                       <br />
-                      <h4>Written by {book.author_name}</h4>
+                      <h6>Written by {book.author_name}</h6>
                     </Link>
-                  </button>
-                </div>
-              ))
-          ) : (
-            <div />
-          )}
+                    <br />
+                    <br />
+                  </div>
+                ))
+            ) : (
+              <div />
+            )}
+          </div>
         </div>
         <Footer />
       </div>
