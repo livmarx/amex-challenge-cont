@@ -74,10 +74,12 @@ class SearchBars extends React.Component {
         <NavBar />
 
         <h1>General Seach</h1>
-        <p className="search-body">
-          Here, users can search for books based on title or author last name.
-          Use this search to find all your options!
-        </p>
+        <div className="search-body">
+          <p>
+            Here, users can search for books based on title or author last name.
+            Use this search to find all your options!
+          </p>
+        </div>
         <div className="search-bars">
           <div className="general-search">
             <div className="input-feild">
