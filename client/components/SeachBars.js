@@ -79,6 +79,7 @@ class SearchBars extends React.Component {
             Here, users can search for books based on title or author last name.
             Use this search to find all your options!
           </p>
+          <br />
         </div>
         <div className="search-bars">
           <div className="general-search">

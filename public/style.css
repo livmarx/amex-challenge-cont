@@ -40,7 +40,7 @@ h1 {
   margin: 10px 10px 40px 10px;
 }
 #about p {
-  width: 910px;
+  width: 360px;
   margin: 0 auto;
   padding: 10px;
   background-color: royalblue;
@@ -145,6 +145,7 @@ h1 {
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
+    list-style-type: none;
   }
 
   .footer img {
@@ -163,6 +164,7 @@ h1 {
   }
   .footer li {
     display: none;
+    text-decoration: none;
   }
   .footer img {
     display: none;
@@ -240,74 +242,63 @@ h1 {
   /* align-self: auto; */
   /* justify-content: space-around; */
   background-color: #9ab5e2;
+  text-align: left;
   margin: auto;
-  width: 400px;
+  padding: 5px;
+  width: 380px;
 }
 
 form {
-  width: 400px;
+  width: 350px;
+  margin: auto;
+  padding: 1px;
+}
+
+p {
+  width: 300px;
+  margin: auto;
 }
 
 input {
-  width: 120px;
+  width: 90px;
 }
 
 /* --------- */
-/* .search-bars-id {
-  display: flex;
-  justify-content: space-around;
-  background-color: #9ab5e2;
-  margin: 0 auto;
-  width: 1000px;
-}
-.id-search {
-  align-items: space-around;
-  padding: 20px;
-  text-align: left;
-}
-
-.general-search {
-  align-items: space-around;
-  padding: 20px;
-  text-align: left;
-}
-
-.book-by-title-author {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.search-body {
-  width: 300px;
-  margin: 0 auto;
-  padding: 10px;
-  opacity: 0.7;
-}
-
-.book-card {
-  padding: 20px;
-  margin: 10px;
-}
-
-.book-card a h3 {
-  margin: 0;
-  color: whitesmoke;
-  text-decoration: none;
-}
-.book-card h4 {
-  margin: 0;
-} */
 
 @media screen and (min-width: 800px) {
-  h1 {
-    color: tomato;
-  }
-  .seach-body {
-    width: 910;
-  }
   .search-bars {
-    flex-direction: row;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* align-self: auto; */
+    /* justify-content: space-around; */
+    background-color: #9ab5e2;
+    /* text-align: center; */
+    margin: auto;
+    padding: 0px 25px 0px 25px;
+    width: 480px;
   }
+
+  form {
+    width: 750px;
+    margin: auto;
+    padding: 1px;
+  }
+  #about p {
+    width: 700px;
+    margin: auto;
+  }
+  p {
+    width: 700px;
+    margin: auto;
+  }
+
+  input {
+    width: 200px;
+  }
+}
+
+/* -------- Single Book: -------- */
+
+.single-book-img {
+  width: 300px;
 }

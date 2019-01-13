@@ -20,7 +20,7 @@ class Footer extends React.Component {
               className="nav-links"
             >
               <button type="button" className="myButton">
-                <p>Follow @openlibrary</p>
+                Follow @openlibrary
               </button>
             </a>
           </li>
@@ -33,7 +33,7 @@ class Footer extends React.Component {
             >
               {' '}
               <button type="button" className="myButton">
-                <p>Follow @livmarx</p>
+                Follow @livmarx
               </button>
             </a>
           </li>
@@ -44,7 +44,7 @@ class Footer extends React.Component {
             >
               {' '}
               <button type="button" className="myButton">
-                <p>Powered by Open Library</p>
+                Powered by Open Library
               </button>
             </a>
           </li>

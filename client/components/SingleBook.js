@@ -48,9 +48,12 @@ class SingleBook extends React.Component {
               <p>{this.state.description}</p>
             </a>
             {this.props.book.cover ? (
-              <img src={this.props.book.cover.large} />
+              <img
+                src={this.props.book.cover.large}
+                className="single-book-img"
+              />
             ) : (
-              <img src={this.state.cover} />
+              <img src={this.state.cover} className="single-book-img" />
             )}
           </div>
         ) : (
