@@ -30,14 +30,14 @@ html {
 .title img {
   opacity: 0.5;
 }
-.title h1 {
+
+h1 {
   font-size: 40px;
   font-family: 'Syncopate', sans-serif;
   margin-top: 15px;
+  text-shadow: 3px 3px 15px #1f4783;
 }
-h1 {
-  font-size: 60px;
-}
+
 #about {
   margin: 10px 10px 40px 10px;
 }
@@ -338,5 +338,7 @@ input {
 /* -------- Single Book: -------- */
 
 .single-book-img {
+  box-shadow: 5px 5px 15px #1f4783;
+  border: solid 5px #1f4783;
   width: 300px;
 }

@@ -164,7 +164,7 @@ class SearchBarsId extends React.Component {
         </div>
         <div id="book-by-id">
           {book ? (
-            <div className="book-card">
+            <div>
               <h3> {book.title}</h3>
               <h5>{this.props.bookDetails.details.subtitle}</h5>
               <h5>Written by {book.authors[0].name}</h5>
