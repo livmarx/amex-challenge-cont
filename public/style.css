@@ -31,6 +31,8 @@ html {
   opacity: 0.5;
 }
 .title h1 {
+  font-size: 40px;
+  font-family: 'Syncopate', sans-serif;
   margin-top: 15px;
 }
 h1 {
@@ -95,6 +97,9 @@ h1 {
   padding: 10px;
 }
 @media screen and (min-width: 850px) {
+  .title h1 {
+    font-size: 80px;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -309,7 +314,7 @@ input {
 }
 
 .search-links {
-  color: whitesmoke;
+  color: #378de5;
 }
 
 .search-links:hover {
