@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # BÜQSHELPH: Amex coding challenge (cont.)
 
 #### About
