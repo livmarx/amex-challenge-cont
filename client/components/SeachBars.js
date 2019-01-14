@@ -129,7 +129,7 @@ class SearchBars extends React.Component {
           <br />
           Sort By:{' '}
           <select className="dropdown" onChange={this.handleSelect}>
-            <option value="Author: a-z ">Author: a-z </option>
+            <option value="Author: a-z ">Author: a-z</option>
             <option value="Title: a-z">Title: a-z</option>
           </select>
         </div>

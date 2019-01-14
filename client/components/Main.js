@@ -9,7 +9,7 @@ class Main extends React.Component {
       <div id="main">
         <NavBar />
         <div className="title">
-          <h1>bÜkshelph</h1>
+          <h1>BÜQSHELPH</h1>
           <br />
         </div>
         <br />

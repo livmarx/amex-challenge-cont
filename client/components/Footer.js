@@ -6,10 +6,7 @@ class Footer extends React.Component {
     return (
       <div className="footer">
         <Link to="/" className="logo">
-          <img
-            src="https://unixtitan.net/images/book-clipart-5.png"
-            className="bookself-img"
-          />
+          <img src="open-book2.png" className="bookself-img" />
         </Link>
         <ul className="main-footer" id="js-menu">
           <li>

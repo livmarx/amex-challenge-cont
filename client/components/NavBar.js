@@ -26,10 +26,7 @@ class NavBar extends React.Component {
           <i className="fas fa-bars" />
         </span>
         <Link to="/" className="logo">
-          <img
-            src="https://unixtitan.net/images/book-clipart-5.png"
-            className="bookself-img"
-          />
+          <img src="open-book2.png" className="bookself-img" />
         </Link>
         <ul className="main-nav" id="js-menu">
           <li>
