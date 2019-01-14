@@ -20,11 +20,11 @@ Run `npm install` from with in the reopsitory to make sure you have all the depe
 
 ### Other Thoughts:
 
-##### > Is redux really needed?
+> Is redux really needed?
 
-##### > Should the reducer reflect RESTful code or simple code?
+> Should the reducer reflect RESTful code or simple code?
 
-##### > Is the Single Book View needed?
+> Is the Single Book View needed?
 
 ### Next Steps:
 
