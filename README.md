@@ -18,7 +18,7 @@ Run `npm install` from with in the reopsitory to make sure you have all the depe
 
 ##### If you would like to see the deployed version, visit: http://mighty-tor-67345.herokuapp.com
 
-### > Other Thoughts:
+###Other Thoughts:
 
 ##### > Is redux really needed?
 
