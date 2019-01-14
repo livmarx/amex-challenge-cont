@@ -16,11 +16,11 @@ class Main extends React.Component {
         <div id="about">
           <p>
             Winter is coming and tis the season of book-lovers! As the weather
-            cools and we find ourselves cooped up inside, bÜkshelph strives to
+            cools and we find ourselves cooped up inside, BÜQSHELPH strives to
             provide everyone with equal access to the literature that warms our
             hearts and ignites our imagination. This is site designed for you
             fire-side-dwellers, hot-tea-sippers, and stay-too-long-in-beders.
-            Because at bÜkshelph, we believe that everyone should have the
+            Because at BÜQSHELPH, we believe that everyone should have the
             freedom to stay inside.
             <br />
             <br />

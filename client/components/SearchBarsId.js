@@ -65,7 +65,7 @@ class SearchBarsId extends React.Component {
         <NavBar />
         <h1>Advanced Search</h1>
         <p className="search-body">
-          At bÜkshelph, we support searches with ISBN, OCLC, OLID, and LCCN.
+          At BÜQSHELPH, we support searches with ISBN, OCLC, OLID, and LCCN.
           This is recomended for finding particular versions of historical texts
           or translated works.
         </p>

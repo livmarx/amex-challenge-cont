@@ -9,12 +9,6 @@ html {
   background-repeat: no-repeat;
 }
 
-/* * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-} */
-
 /* ------------Main Page: ------------- */
 #main {
   margin-top: 150px;
@@ -36,6 +30,13 @@ h1 {
   font-family: 'Syncopate', sans-serif;
   margin-top: 15px;
   text-shadow: 3px 3px 15px #1f4783;
+}
+
+h4,
+h3,
+h6,
+form {
+  font-family: 'Raleway', sans-serif;
 }
 p {
   font-family: 'Raleway', sans-serif;
@@ -206,7 +207,7 @@ p {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font-family: Arial;
+  font-family: 'Raleway', sans-serif;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;

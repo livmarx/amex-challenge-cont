@@ -73,7 +73,7 @@ class SearchBars extends React.Component {
       <div>
         <NavBar />
 
-        <h1>General Seach</h1>
+        <h1>General Search</h1>
         <div className="search-body">
           <p>
             Here, users can search for books based on title or author last name.
@@ -112,7 +112,8 @@ class SearchBars extends React.Component {
                   name="author"
                   value={this.state.searchInputAuthor}
                   onChange={this.handleChange}
-                />{' '}
+                />
+                {'  '}
                 <button
                   type="submit"
                   value="Search"
@@ -127,7 +128,7 @@ class SearchBars extends React.Component {
         </div>
         <div className="dd-menu">
           <br />
-          Sort By:{' '}
+          Sort By:{'  '}
           <select className="dropdown" onChange={this.handleSelect}>
             <option value="Author: a-z ">Author: a-z</option>
             <option value="Title: a-z">Title: a-z</option>
