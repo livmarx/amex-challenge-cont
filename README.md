@@ -25,3 +25,11 @@ Run `npm install` from with in the reopsitory to make sure you have all the depe
 ##### > Should the reducer reflect RESTful code or simple code?
 
 ##### > Is the Single Book View needed?
+
+### Next Steps:
+
+> re-organize the sigle book view
+
+> Add logos for twitter, github, linkedIn instead of buttons
+
+> dynamically load random articles from an api on main page instead of hard-coding
