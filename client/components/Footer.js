@@ -5,9 +5,9 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer">
-        <Link to="/" className="logo">
+        {/* <Link to="/" className="logo">
           <img src="open-book2.png" className="bookself-img" />
-        </Link>
+        </Link> */}
         <ul className="main-footer" id="js-menu">
           <li>
             <a
