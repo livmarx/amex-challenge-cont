@@ -186,9 +186,7 @@ class SearchBarsId extends React.Component {
               )}
             </div>
           ) : (
-            <div>
-              <p>Loading...</p>
-            </div>
+            <div />
           )}
         </div>
         <Footer />

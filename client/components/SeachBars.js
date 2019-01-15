@@ -157,9 +157,7 @@ class SearchBars extends React.Component {
                   </div>
                 ))
             ) : (
-              <div>
-                <p>Loading...</p>
-              </div>
+              <div />
             )}
           </div>
         </div>
