@@ -57,7 +57,9 @@ class SingleBook extends React.Component {
             )}
           </div>
         ) : (
-          <div>NO</div>
+          <div>
+            <p>Loading...</p>
+          </div>
         )}
 
         <Footer />
