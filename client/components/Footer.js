@@ -8,6 +8,7 @@ class Footer extends React.Component {
         {/* <Link to="/" className="logo">
           <img src="open-book2.png" className="bookself-img" />
         </Link> */}
+        <div />
         <ul className="main-footer" id="js-menu">
           <li>
             <a
